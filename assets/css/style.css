@@ -3,8 +3,8 @@
     --black: #000000;
 
     --red: #FF0011;
-    --yellow: #FFBD02; 
-    --blue: #2D80FF; 
+    --yellow: #FFBD02;
+    --blue: #2D80FF;
     --green: #00C058;
 
     --marginDesktop: 32px;
@@ -24,62 +24,63 @@
     font-style: normal;
 }
 
-body{
-    background-color: var(--bg-color); 
+body {
+    background-color: var(--bg-color);
     margin: var(--marginDesktop);
- }
- 
- *{
-     margin:0;
-     padding:0;
- }
- 
- p{
-     font-family: 'Satoshi', sans-serif;
-     font-weight: 400;
-     font-style: normal;
-     font-size: 20px;
- }
-
- .p-bigger{
-    font-size: 25px;
-    line-height: 28px;
- }
-
- .p-smaller{
-    font-size: 15px;
-    line-height: 19px;
- }
-
- .grid{
-    display: grid;
-    grid-template-columns: repeat(16, 1fr);
-    grid-gap: 30px;
 }
 
-.bold{
+* {
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    font-family: 'Satoshi', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+}
+
+.p-bigger {
+    font-size: 25px;
+    line-height: 28px;
+}
+
+.p-smaller {
+    font-size: 15px;
+    line-height: 19px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(16, 1fr);
+    row-gap: var(--marginDesktop);
+    column-gap: 0px;
+}
+
+.bold {
     font-family: 'Satoshi-Bold', sans-serif;
     font-weight: 400;
     font-style: normal;
 }
- 
+
 /*Header*/
-header{
+header {
     display: flex;
     justify-content: space-between;
     margin-bottom: 40px;
 }
 
-.headerLogo-p{
+.headerLogo-p {
     font-size: 30px;
     line-height: 34px;
 }
 
-.headerLanguage{
+.headerLanguage {
     display: flex;
 }
 
-.language{
+.language {
     aspect-ratio: 1 / 1;
     width: 48px;
     height: 48px;
@@ -90,19 +91,21 @@ header{
     align-items: center;
 }
 
-.language-select{
+.language-select {
     background-color: var(--black);
     color: var(--bg-color)
 }
+
 /*Index*/
-.landingInfo-container{
+.landingInfo-container {
     margin-bottom: var(--marginDesktop);
 }
 
-.landingInfo{
+.landingInfo {
     grid-column: 1 / span 8;
 }
-.highlightText p{
+
+.highlightText p {
     font-size: 190px;
     line-height: 190px;
 }
@@ -111,44 +114,45 @@ header{
     grid-column: 10 / span 7;
     display: grid;
     grid-template-columns: repeat(7, 1fr);
+    height: fit-content;
 }
 
 .bola {
-    aspect-ratio: 1 / 1; 
+    aspect-ratio: 1 / 1;
     border-radius: 50%;
     background-color: red;
 }
 
-.brtVideo{
+.brtVideo {
     grid-column: span 16;
-    width:100%;
-    aspect-ratio: 16 / 9; 
+    width: 100%;
+    aspect-ratio: 16 / 9;
     background-color: #E6E6E6;
     margin-bottom: var(--marginDesktop);
 }
 
-.info{
+.info {
     grid-column: span 16;
     display: flex;
     margin-bottom: var(--marginDesktop);
 }
 
-.landingInfo-grid{
+.landingInfo-grid {
     display: grid;
     grid-template-columns: repeat(8, 1fr);
 }
 
-.landingInfo-title{
-    grid-column: 1 / span 2; 
+.landingInfo-title {
+    grid-column: 1 / span 2;
 }
 
-.landingInfo-text{
+.landingInfo-text {
     grid-column: 3 / span 6;
-    margin-top:90px;
+    margin-top: 90px;
     margin-bottom: var(--marginDesktop);
 }
 
-.bulletLanding{
+.bulletLanding {
     border-top: 1px solid var(--black);
     grid-column: 1 / span 8;
     height: fit-content;
@@ -156,26 +160,26 @@ header{
     align-items: center;
 }
 
-.bulletLanding-number{
+.bulletLanding-number {
     grid-column: span 2;
 }
 
-.bulletLanding-name{
+.bulletLanding-name {
     grid-column: span 5;
 }
 
-.bulletLanding-svg{
+.bulletLanding-svg {
     grid-column: span 1;
     display: flex;
     justify-content: flex-end;
     align-items: center;
 }
 
-.bullet-header{
+.bullet-header {
     cursor: pointer;
 }
 
-.bulletLanding-container{
+.bulletLanding-container {
     grid-column: span 8;
     align-self: flex-end;
 }
@@ -189,9 +193,10 @@ header{
     opacity: 0;
     margin-top: 0;
     padding-bottom: 0;
-    transition: 
+    transition:
         max-height 0.3s ease-out,
-        opacity 0.2s ease-out 0.1s, /* Delayed slightly to follow height */
+        opacity 0.2s ease-out 0.1s,
+        /* Delayed slightly to follow height */
         margin 0.3s ease-out,
         padding 0.3s ease-out;
 }
@@ -201,9 +206,10 @@ header{
     opacity: 1;
     margin-top: 1rem;
     padding-bottom: 1rem;
-    transition: 
+    transition:
         max-height 0.3s ease-out,
-        opacity 0.1s ease-out, /* Faster opacity when showing */
+        opacity 0.1s ease-out,
+        /* Faster opacity when showing */
         margin 0.3s ease-out,
         padding 0.3s ease-out;
 }
@@ -217,12 +223,117 @@ header{
 }
 
 /*footer*/
-footer{
+footer {
     margin-top: 32px;
-    padding-top:16px;
+    padding-top: 16px;
     border-top: 1px solid var(--black);
 }
 
-.footer-container{
+.footer-container {
     grid-column: span 4;
+}
+
+
+
+@media only screen and (max-width: 1600px) {
+    .highlightText p {
+        font-size: 150px;
+        line-height: 150px;
+    }
+}
+
+
+
+
+@media only screen and (max-width: 960px) {
+    /*geral*/
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        row-gap: var(--marginDesktop);
+        column-gap: 0px;
+    }
+
+    /*index*/
+
+    .landingInfo {
+        grid-column: 1 / span 5;
+    }
+
+    .bolas-container {
+        grid-column: 1 / span 5;
+    } 
+
+    .highlightText p {
+        font-size: 125px;
+        line-height: 125px;
+    }
+
+    .brtVideo {
+        aspect-ratio: 9 / 16;
+    }
+
+    .bolas-container {
+        grid-column: 1 / span 5;
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        height: fit-content;
+    }
+
+    .landingInfo-title {
+        grid-column: 1 / span 5;
+    }
+
+    .landingInfo-text {
+        grid-column: 1 / span 5;
+        margin-top: 10px;
+        margin-bottom: var(--marginDesktop);
+    }
+
+    .landingInfo-grid {
+        grid-template-columns: repeat(5, 1fr);
+    }
+
+    .bulletLanding-number {
+        grid-column: span 1;
+    }
+
+    .bulletLanding-name {
+        grid-column: span 3;
+    }
+
+    .bulletLanding-content {
+        grid-column: 2 / span 5;
+    }
+    
+
+    /*footer*/
+    footer{
+        row-gap: 0 !important;
+    }
+    .footer-container{
+        grid-column: 1 / span 5;
+    }
+
+    .footerhr{
+        display: block;
+        grid-column: 1 / span 5;
+        border:none;
+        border-bottom: 1px solid var(--black);
+    }
+    .footer-container:first-child{
+        padding: 0 0 16px 0;
+    }
+
+    .footer-container {
+        padding: 16px 0;
+    }
+
+}
+
+@media only screen and (max-width: 640px) {
+    .highlightText p {
+        font-size: 80px;
+        line-height: 80px;
+    }
 }
