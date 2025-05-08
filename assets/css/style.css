@@ -187,9 +187,11 @@ header{
     overflow: hidden;
     max-height: 0;
     opacity: 0;
+    margin-top: 0;
+    padding-bottom: 0;
     transition: 
         max-height 0.3s ease-out,
-        opacity 0.3s ease-out,
+        opacity 0.2s ease-out 0.1s, /* Delayed slightly to follow height */
         margin 0.3s ease-out,
         padding 0.3s ease-out;
 }
@@ -199,9 +201,13 @@ header{
     opacity: 1;
     margin-top: 1rem;
     padding-bottom: 1rem;
+    transition: 
+        max-height 0.3s ease-out,
+        opacity 0.1s ease-out, /* Faster opacity when showing */
+        margin 0.3s ease-out,
+        padding 0.3s ease-out;
 }
 
-/* SVG rotation animation */
 .bulletLanding-svg svg {
     transition: transform 0.3s ease-out;
 }
