@@ -373,8 +373,8 @@ footer {
 
 @media only screen and (max-width: 640px) {
     .headerLogo-p {
-        font-size: 25px;
-        line-height: 30px;
+        font-size: 30px;
+        line-height: 35px;
     }
 
     .highlightText p {
