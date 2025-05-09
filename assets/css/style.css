@@ -121,7 +121,6 @@ header {
     position: relative;
     aspect-ratio: 1 / 1;
     border-radius: 50%;
-    background-color: red;
 }
 
 .bolas-container-desktop{
@@ -271,6 +270,10 @@ footer {
 
 
 @media only screen and (max-width: 960px) {
+    body {
+        background-color: var(--blue);
+    }
+    
     /*geral*/
     .grid {
         display: grid;
@@ -373,6 +376,10 @@ footer {
 }
 
 @media only screen and (max-width: 640px) {
+    body {
+        background-color: var(--red);
+    }
+
     .highlightText p {
         font-size: 80px;
         line-height: 80px;
