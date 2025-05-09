@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>BRT Braga</title>
+    <title>Braga Metro Bus</title>
     <link rel="stylesheet" href="assets/css/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
@@ -30,18 +30,11 @@
                 <p>O futuro</p>
                 <p class="bold">é por aqui</p>
             </div>
-            <div class="bolas-container">
+            <div id="bolas-container1" class="bolas-container bolas-container-desktop"></div>
+
+
+            <div id="bolas-container2" class="bolas-container bolas-container-mobile">
                 <!--row-->
-                <div class="bola"></div>
-                <div class="bola"></div>
-                <div class="bola"></div>
-                <div class="bola"></div>
-                <div class="bola"></div>
-                <div class="bola"></div>
-                <div class="bola"></div>
-                <!--row-->
-                <div class="bola"></div>
-                <div class="bola"></div>
                 <div class="bola"></div>
                 <div class="bola"></div>
                 <div class="bola"></div>
@@ -53,6 +46,10 @@
                 <div class="bola"></div>
                 <div class="bola"></div>
                 <div class="bola"></div>
+                <!--row-->
+                <div class="bola"></div>
+                <div class="bola"></div>
+                <div class="bola"></div>
                 <div class="bola"></div>
                 <div class="bola"></div>
                 <!--row-->
@@ -61,11 +58,7 @@
                 <div class="bola"></div>
                 <div class="bola"></div>
                 <div class="bola"></div>
-                <div class="bola"></div>
-                <div class="bola"></div>
                 <!--row-->
-                <div class="bola"></div>
-                <div class="bola"></div>
                 <div class="bola"></div>
                 <div class="bola"></div>
                 <div class="bola"></div>
@@ -88,27 +81,26 @@
                     essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets
                     containing Lorem Ipsum</p>
 
-                    <div class="bolas-container bolas-container-mobile">
-                        <!--row-->
-                        <div class="bola"></div>
-                        <div class="bola"></div>
-                        <div class="bola"></div>
-                        <div class="bola"></div>
-                        <div class="bola"></div>
-                        <!--row-->
-                        <div class="bola"></div>
-                        <div class="bola"></div>
-                        <div class="bola"></div>
-                        <div class="bola"></div>
-                        <div class="bola"></div>
-                        <!--row-->
-                        <div class="bola"></div>
-                        <div class="bola"></div>
-                        <div class="bola"></div>
-                        <div class="bola"></div>
-                        <div class="bola"></div>
-                        
-                    </div>
+                <div id="bolas-container3" class="bolas-container bolas-container-mobile  bolas-margin-bot">
+                    <!--row-->
+                    <div class="bola"></div>
+                    <div class="bola"></div>
+                    <div class="bola"></div>
+                    <div class="bola"></div>
+                    <div class="bola"></div>
+                    <!--row-->
+                    <div class="bola"></div>
+                    <div class="bola"></div>
+                    <div class="bola"></div>
+                    <div class="bola"></div>
+                    <div class="bola"></div>
+                    <!--row-->
+                    <div class="bola"></div>
+                    <div class="bola"></div>
+                    <div class="bola"></div>
+                    <div class="bola"></div>
+                    <div class="bola"></div>
+                </div>
 
                 <!--1-->
                 <div class="bulletLanding-container">
@@ -201,7 +193,7 @@
                     </div>
                 </div>
             </div>
-            <div class="bolas-container bolas-container-desktop">
+            <div id="bolas-container4" class="bolas-container bolas-container-desktop">
                 <!--row-->
                 <div class="bola"></div>
                 <div class="bola"></div>
@@ -259,7 +251,7 @@
                 <div class="bola"></div>
                 <div class="bola"></div>
             </div>
-            <div class="bolas-container bolas-container-mobile">
+            <div id="bolas-container5" class="bolas-container bolas-container-mobile">
                 <!--row-->
                 <div class="bola"></div>
                 <div class="bola"></div>
@@ -278,7 +270,7 @@
                 <div class="bola"></div>
                 <div class="bola"></div>
                 <div class="bola"></div>
-                
+
             </div>
         </div>
 
@@ -312,37 +304,9 @@
     </footer>
 
 
-    <script>
-document.addEventListener('DOMContentLoaded', function() {
-    const headers = document.querySelectorAll('.bullet-header');
-    
-    headers.forEach(header => {
-        header.addEventListener('click', function() {
-            const content = this.parentElement.querySelector('.bulletLanding-content');
-            const isOpening = !content.classList.contains('show');
-            
-            if (isOpening) {
-                document.querySelectorAll('.bulletLanding-content.show').forEach(openContent => {
-                    if (openContent !== content) {
-                        openContent.classList.remove('show');
-                        openContent.closest('.bulletLanding')
-                            .querySelector('.bullet-header')
-                            .classList.remove('active');
-                    }
-                });
-                
-                setTimeout(() => {
-                    content.classList.add('show');
-                    this.classList.add('active');
-                }, 50);
-            } else {
-                content.classList.remove('show');
-                this.classList.remove('active');
-            }
-        });
-    });
-});
-    </script>
+    <script src="assets/js/bolas.js"></script>
+    <script src="assets/js/bullet.js"></script>
+
 
 </body>
 

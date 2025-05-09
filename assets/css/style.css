@@ -118,9 +118,31 @@ header {
 }
 
 .bola {
+    position: relative;
     aspect-ratio: 1 / 1;
     border-radius: 50%;
     background-color: red;
+}
+
+.bolas-container-desktop{
+    display: grid;
+}
+.bolas-container-mobile{
+    display: none;
+}
+
+.bola-icon {
+    position: absolute;
+    width: 60%;
+    height: 60%;
+    top: 20%;
+    left: 20%;
+    pointer-events: none;
+}
+
+.empty-slot {
+    aspect-ratio: 1 / 1;
+    visibility: hidden;
 }
 
 .brtVideo {
@@ -196,7 +218,6 @@ header {
     transition:
         max-height 0.3s ease-out,
         opacity 0.2s ease-out 0.1s,
-        /* Delayed slightly to follow height */
         margin 0.3s ease-out,
         padding 0.3s ease-out;
 }
@@ -209,7 +230,6 @@ header {
     transition:
         max-height 0.3s ease-out,
         opacity 0.1s ease-out,
-        /* Faster opacity when showing */
         margin 0.3s ease-out,
         padding 0.3s ease-out;
 }
@@ -222,6 +242,7 @@ header {
     transform: rotate(45deg);
 }
 
+
 /*footer*/
 footer {
     margin-top: 32px;
@@ -233,12 +254,16 @@ footer {
     grid-column: span 4;
 }
 
+.footerhr{
+    display: none;
+}
+
 
 
 @media only screen and (max-width: 1600px) {
     .highlightText p {
-        font-size: 150px;
-        line-height: 150px;
+        font-size: 120px;
+        line-height: 120px;
     }
 }
 
@@ -265,8 +290,8 @@ footer {
     } 
 
     .highlightText p {
-        font-size: 125px;
-        line-height: 125px;
+        font-size: 100px;
+        line-height: 100px;
     }
 
     .brtVideo {
@@ -305,6 +330,17 @@ footer {
     .bulletLanding-content {
         grid-column: 2 / span 5;
     }
+
+    .bolas-container-desktop{
+        display: none;
+    }
+    .bolas-container-mobile{
+        display: grid;
+    }
+
+    .bolas-margin-bot{
+        margin-bottom: var(--marginDesktop);
+    }
     
 
     /*footer*/
@@ -328,6 +364,11 @@ footer {
     .footer-container {
         padding: 16px 0;
     }
+
+    .footerhr{
+        display: block;
+    }
+    
 
 }
 
